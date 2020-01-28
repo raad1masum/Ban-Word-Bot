@@ -12,7 +12,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.lower() == "deffo":
-        await message.channel.send("STOP SAYING THAT!!!")
+    if message.content.startswith('$deffo'):
+        await message.channel.send('STOP SAYING THAT!!!')
 
 client.run('key')
