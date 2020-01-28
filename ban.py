@@ -3,16 +3,22 @@ from discord.ext import commands
 
 client = discord.Client()
 
+deny = "stop doing that"
+words = ['deffo', 'cap', 'fr']
+
 @client.event
 async def on_ready():
     print('Bot is ready.')
 
 @client.event
 async def on_message(message):
+    ms = message.content.lower()
+
     if message.author == client.user:
         return
 
-    if message.content.startswith('$deffo'):
-        await message.channel.send('STOP SAYING THAT!!!')
+    for x in words:
+        if x == ms:
+            await message.channel.send(deny)
 
 client.run('key')
