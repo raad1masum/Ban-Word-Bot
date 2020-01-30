@@ -3,8 +3,8 @@ from discord.ext import commands
 
 client = discord.Client()
 
-deny = "stop doing that"
-words = ['deffo', 'cap', 'fr', 'atm', 'lowk', 'highk', 'istg', 'cappin', 'yk', 'mv', 'wld', 'ihy', 'gfy', 'j']
+deny = "deny message"
+words = []
 
 @client.event
 async def on_ready():
